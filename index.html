@@ -1,127 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="dashboard">
-    <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <!-- -----css file --------  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- --------outermost container / whole dashboard -->
+    <div class="dashboard">
+      <div class="container">
+        <!-- left container inside dashboard -->
         <div class="inner-left-container">
-            <div class="input">
-                <input type="text" placeholder="Enter city name" spellcheck="false" >
-                <button id="search"><img src="images/search.png"></button>
+          <!-- -------search by location-------- -->
+          <div class="input">
+            <input
+              type="text"
+              placeholder="Enter city name"
+              spellcheck="false"
+            />
+            <button id="search"><img src="images/search.png" /></button>
+          </div>
+
+          <!-- ---------invalid loaction field----------error handling ---------- -->
+          <div class="error">
+            <p>Invalid city name</p>
+          </div>
+
+          <!-- --------image of current weather -->
+          <div class="weather-image">
+            <img src="" />
+          </div>
+
+          <!-- --------city temp , name ------------->
+          <div class="temp-city">
+            <h1 id="temp">&deg;c</h1>
+            <h2 id="city-name"></h2>
+          </div>
+
+          <div class="footer">
+            <!-- --------humidity--------- -->
+            <div class="left">
+              <img src="images/humidity.png" alt="" />
+              <div>
+                <p id="humid">%</p>
+                <p class="name">Humidity</p>
+              </div>
             </div>
-            <div class="error">
-                <p>Invalid city name</p>
+
+            <!-- --------wind speed--------- -->
+            <div class="right">
+              <img src="images/wind.png" alt="" />
+              <div>
+                <p id="speed">km/hr</p>
+                <p class="name">Wind speed</p>
+              </div>
             </div>
-            <div class="weather-image">
-                <img src="">
-            </div>
-            <div class="temp-city">
-                <h1 id="temp">&deg;c</h1>
-                <h2 id="city-name"></h2>
-            </div>
-            <div class="footer">
-                <div class="left">
-                    <img src="images/humidity.png" alt="">
-                    <div>
-                        <p id="humid">%</p>
-                        <p class="name">Humidity</p>    
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="images/wind.png" alt="">
-                    <div>
-                        <p id="speed">km/hr</p>
-                        <p class="name">Wind speed</p>     
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- right container inside dashboard -->
         <div class="inner-right-container">
+          <!-- ----------block1 : next 5 days temp -->
           <h2>Weekly Report:</h2>
           <div class="block">
+            <!-- ------1st day----- -->
             <div class="mini-container">
               <p class="date">11-Feb-2024</p>
               <p class="day">Sunday</p>
               <div class="">
-                  <img class="image1" src="images/clear.png" width="100px">
+                <img class="image1" src="images/clear.png" width="100px" />
               </div>
               <p><span class="temp1">22</span>&deg;c</p>
-          </div>
+            </div>
+
+            <!-- ------2nd day----- -->
             <div class="mini-container">
-              <p class="date">11-Feb-2024</p>
-              <p class="day">Sunday</p>
+              <p class="date">12-Feb-2024</p>
+              <p class="day">Monday</p>
               <div class="">
-                  <img class="image2" src="images/clear.png" width="100px">
+                <img class="image2" src="images/clear.png" width="100px" />
               </div>
               <p><span class="temp2">22</span>&deg;c</p>
-          </div>
+            </div>
+
+            <!-- ------3rd day----- -->
             <div class="mini-container">
-              <p class="date">11-Feb-2024</p>
-              <p class="day">Sunday</p>
+              <p class="date">13-Feb-2024</p>
+              <p class="day">Tuesday</p>
               <div class="">
-                  <img class="image3" src="images/clear.png" width="100px">
+                <img class="image3" src="images/clear.png" width="100px" />
               </div>
               <p><span class="temp3">22</span>&deg;c</p>
-          </div>
+            </div>
+
+            <!-- ------4th day----- -->
             <div class="mini-container">
-              <p class="date">11-Feb-2024</p>
-              <p class="day">Sunday</p>
+              <p class="date">14-Feb-2024</p>
+              <p class="day">Wednesday</p>
               <div class="">
-                  <img class="image4" src="images/clear.png" width="100px">
+                <img class="image4" src="images/clear.png" width="100px" />
               </div>
               <p><span class="temp4">22</span>&deg;c</p>
+            </div>
           </div>
-          </div>
+
+          <!-- ----------block2 : weather conditions -->
           <h2>Today's weather conditions:</h2>
           <div class="block">
+            <!----------visibility --------->
             <div class="mini-container">
-
-              <p>Visibility</p>
-              <h2><span class="vis">10</span> Km</h2>
-              <p>Average</p>
-
-          </div>
-          <div class="mini-container">
-              <div class="weather-image">
-                  <img src="">
+              <div class="visibility">
+                <p>Visibility</p>
+                <h2><span class="vis">10</span> Km</h2>
+                <p class="remark">Average</p>
               </div>
-              <div class="footer">
-                  <div class="left">
-                      <img src="images/humidity.png" alt="">
-                      <div>
-                          <p id="humid">%</p>
-                          <p class="name">Humidity</p>    
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="mini-container">
-              <div class="weather-image">
-                  <img src="">
-              </div>
-              <div class="footer">
-                  <div class="left">
-                      <img src="images/humidity.png" alt="">
-                      <div>
-                          <p id="humid">%</p>
-                          <p class="name">Humidity</p>    
-                      </div>
-                  </div>
-              </div>
-          </div> 
-          </div>
+            </div>
+            <!----------last container --------->
+            <div id="last-container"></div>
         </div>
-        
+      </div>
     </div>
-  </div>
-    
-
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
