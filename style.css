@@ -13,8 +13,8 @@
 .dashboard {
   margin: 5rem;
   background-color: rgb(241, 240, 240);
-  width: 90vw;
   height: 80vh;
+  min-height: 80vh;
   border-radius: 14px;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.5);
 }
@@ -68,7 +68,8 @@
 }
 
 /* -------4 days , visibility , , -------- */
-.mini-container,#last-container {
+.mini-container,
+#last-container {
   height: 80%;
   border-radius: 14px;
   display: flex;
@@ -84,11 +85,9 @@
   background-color: white;
 }
 
-
 /* -------search fields--------- */
 .input {
   max-width: 100%;
-  overflow: hidden;
   padding: 2.5rem 2rem;
   display: flex;
   align-items: center;
@@ -140,7 +139,6 @@
   font-weight: 200;
   font-size: 32px;
 }
-
 
 /* -------humidity and wind speed--------- */
 .footer {
@@ -223,7 +221,32 @@
 }
 
 /* -------lower block--------- */
-#last-container{
+#last-container {
   width: 100%;
   background-size: cover;
+}
+
+@media (max-width: 1440px) {
+  .dashboard {
+    margin: 5rem 1rem;
+  }
+
+  .input input {
+    position: relative;
+    left: 1rem;
+  }
+  .input button {
+    position: relative;
+    right: 3rem;
+  }
+
+  .block {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .input input {
+    width: 10rem;
+  }
 }
