@@ -4,6 +4,10 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric`;
 // https://api.openweathermap.org/data/2.5/forecast?q=ghaziabad&appid=6105b6b3c28281b0e5f6d8088b8ce79a
 const weatherImage = document.querySelector(".weather-image");
 const tempCity = document.querySelector(".temp-city");
+const temp1 = document.querySelector(".temp1");
+const temp2 = document.querySelector(".temp2");
+const temp3 = document.querySelector(".temp3");
+const temp4 = document.querySelector(".temp4");
 const footer = document.querySelector(".footer");
 const error = document.querySelector(".error");
 
@@ -17,8 +21,17 @@ async function checkWeather(cityName){
         footer.classList.remove("visible-flex");
     }else{
         const data = await response.json();
-        console.log(data.list[0].weather[0].main);
+        console.log(data.list[0].visibility);
         error.classList.remove("visible");
+        temp1.innerHTML = data.list[8].main.temp;
+        temp2.innerHTML = data.list[16].main.temp;
+        temp3.innerHTML = data.list[24].main.temp;
+        temp4.innerHTML = data.list[32].main.temp;
+        document.querySelector(".vis").innerHTML = (data.list[0].visibility)/1000;
+        document.querySelector(".image1").src = `images/${data.list[8].weather[0].main}.png`;
+        document.querySelector(".image2").src = `images/${data.list[16].weather[0].main}.png`;
+        document.querySelector(".image3").src = `images/${data.list[24].weather[0].main}.png`;
+        document.querySelector(".image4").src = `images/${data.list[32].weather[0].main}.png`;
         document.getElementById("city-name").innerHTML = data['city'].name;
         document.getElementById("humid").innerHTML = `${data.list[0].main.humidity}%`;
         document.getElementById("speed").innerHTML = `${data.list[0].wind.speed} km/hr`;
@@ -71,7 +84,7 @@ async function getLocation() {
           console.log(data.results[0].components);
 
           if (data.results && data.results.length > 0) {
-            const city = data.results[0].components.state;
+            const city = data.results[0].components.city;
 
             await checkWeather(city);
             tempCity.classList.add("visible");
