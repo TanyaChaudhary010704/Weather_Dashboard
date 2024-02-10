@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* ------- google font -------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* -------general style--------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-/* body{
-  background-color: rgb(236, 235, 235);
-} */
-.dashboard{
+
+/* -------dashboard--------- */
+.dashboard {
   margin: 5rem;
   background-color: rgb(241, 240, 240);
   width: 90vw;
@@ -16,33 +18,36 @@
   border-radius: 14px;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.5);
 }
-.container{
-     height: 100%;
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    position: relative;
-    left: 0;
-    top: 0;
-    border-radius: 14px;
-    width: 100%;
-    background-color: rgb(241, 241, 241);
+
+/* ------container--------- */
+.container {
+  height: 100%;
+  display: flex;
+  position: relative;
+  left: 0;
+  top: 0;
+  border-radius: 14px;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
 }
-.inner-left-container{
-    height: 100%;
-    background: linear-gradient(135deg,pink,#9aa5fd);
-    border-top-left-radius: 14px;
-    border-bottom-left-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 100%; */
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 40%;
+
+/* -------left container--------- */
+.inner-left-container {
+  height: 100%;
+  background: linear-gradient(135deg, pink, #9aa5fd);
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 40%;
 }
-.inner-right-container{
+
+/* -------right container--------- */
+.inner-right-container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -50,7 +55,9 @@
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
 }
-.block{
+
+/* -------blocks right part--------- */
+.block {
   height: 50%;
   display: flex;
   flex-direction: row;
@@ -59,149 +66,164 @@
   border-bottom-right-radius: 14px;
   align-items: center;
 }
-.mini-container{
-    height: 80%;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 100%; */
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 35%;
-    margin: 0 1rem;
-    /* border: 1px solid black;
-    outline: 1px solid black; */
-    /* background: linear-gradient(135deg,rgb(237, 223, 237),white); */
-    padding: 1rem;
-    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.604);
-    background-color: white;
 
+/* -------4 days , visibility , , -------- */
+.mini-container,#last-container {
+  height: 80%;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 35%;
+  margin: 0 1rem;
+  padding: 1rem;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.604);
+  background-color: white;
 }
-.input{
-    max-width: 100%;
-    overflow: hidden;
-    padding: 2.5rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: .5rem;
+
+
+/* -------search fields--------- */
+.input {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.5rem;
 }
-.input input{
-    height: 2.5rem;
-    flex: 1;
-    border-radius: 20px;
-    border: none;
-    padding: 1rem 3rem;
-    font-size: 1rem;
-    outline: none;
-    font-weight: 500;
+.input input {
+  height: 2.5rem;
+  flex: 1;
+  border-radius: 20px;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  outline: none;
+  font-weight: 500;
 }
-.input button{
-    height: 2.5rem;
-    width: 2.5rem;
-    border: none;
-    border-radius: 2rem;
-    background: white;
+.input button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  background: white;
 }
-.input button img{
-    height: 2rem;
-    padding: 6px;
+.input button img {
+  height: 2rem;
+  padding: 6px;
 }
-.error{
-    width: 100%;
-    color: white;
-    text-align: left;
-    font-size: 20px;
-    padding: 0 60px 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    display: none;
+
+.weather-image {
+  margin-top: -20px;
+  display: none;
 }
-.weather-image{
-    margin-top: -20px;
-    display: none;
+.weather-image img {
+  width: 15rem;
 }
-.weather-image img{
-    width: 15rem;
+
+.temp-city {
+  text-align: center;
+  color: white;
+  display: none;
 }
-.temp-city{
-    text-align: center;
-    color: white;
-    display: none;
+.temp-city h1 {
+  margin-top: -32px;
+  font-size: 65px;
+  font-weight: 200;
 }
-.temp-city h1{
-    margin-top: -32px;
-    font-size: 65px;
-    font-weight: 200;
+.temp-city h2 {
+  margin-top: -25px;
+  font-weight: 200;
+  font-size: 32px;
 }
-.temp-city h2{
-    margin-top: -25px;
-    font-weight: 200;
-    font-size: 32px;
+
+
+/* -------humidity and wind speed--------- */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 15px;
+  display: none;
 }
-.footer{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 40px 15px;
-    display: none;
-}
-.footer div img{
-    width: 25px; 
+.footer div img {
+  width: 25px;
 }
 .left,
-.right{
-    display: flex;
-    align-items: flex-start;
+.right {
+  display: flex;
+  align-items: flex-start;
 }
 .left p,
-.right p{
-    color: white;
-    font-size: 18px;
-    margin-left: 5px;
+.right p {
+  color: white;
+  font-size: 18px;
+  margin-left: 5px;
 }
-.name{
-    font-size: 20px;
-}
-
-.visible{
-    display: block;
-}
-.visible-flex{
-    display: flex;
+.name {
+  font-size: 20px;
 }
 
-.inner-right-container h2{
+/* -------invalid location handling--------- */
+.error {
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  padding: 0 60px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: none;
+}
+.visible {
+  display: block;
+}
+.visible-flex {
+  display: flex;
+}
+
+/* -------right part text style--------- */
+.inner-right-container h2 {
   margin: 1rem 1rem 0rem 1rem;
 }
-.inner-right-container p{
+.inner-right-container p {
   line-height: 1rem;
 }
-.inner-right-container span{
+.inner-right-container span {
   font-size: 1.5rem;
   color: #333;
 }
-.day{
-  font-size: .75rem;
+.day {
+  font-size: 0.75rem;
   color: #777;
 }
-.date{
+.date {
   font-size: large;
   font-weight: 500;
 }
-.visibility{
+
+/* -------lower block--------- */
+.visibility {
   align-self: flex-start;
   width: 100%;
 }
-.visibility p{
+.visibility p {
   color: grey;
 }
-.visibility span{
+.visibility span {
   font-size: 4rem;
 }
-.visibility .remark{
-  font-size: .75rem;
+.visibility .remark {
+  font-size: 0.75rem;
+}
+
+/* -------lower block--------- */
+#last-cotnainer{
+  width: 100%;
+  background-size: cover;
 }
