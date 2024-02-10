@@ -5,9 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+/* body{
   background-color: rgb(236, 235, 235);
-}
+} */
 .dashboard{
   margin: 5rem;
   background-color: rgb(241, 240, 240);
@@ -24,10 +24,9 @@ body{
     position: relative;
     left: 0;
     top: 0;
-    border-top-left-radius: 14px;
-    border-bottom-left-radius: 14px;
+    border-radius: 14px;
     width: 100%;
-    background-color: white;
+    background-color: rgb(241, 241, 241);
 }
 .inner-left-container{
     height: 100%;
@@ -71,9 +70,14 @@ body{
     left: 0;
     top: 0;
     width: 35%;
-    margin: 1rem;
-    border: 1px solid black;
-    outline: 1px solid black;
+    margin: 0 1rem;
+    /* border: 1px solid black;
+    outline: 1px solid black; */
+    /* background: linear-gradient(135deg,rgb(237, 223, 237),white); */
+    padding: 1rem;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.604);
+    background-color: white;
+
 }
 .input{
     max-width: 100%;
@@ -170,3 +174,34 @@ body{
     display: flex;
 }
 
+.inner-right-container h2{
+  margin: 1rem 1rem 0rem 1rem;
+}
+.inner-right-container p{
+  line-height: 1rem;
+}
+.inner-right-container span{
+  font-size: 1.5rem;
+  color: #333;
+}
+.day{
+  font-size: .75rem;
+  color: #777;
+}
+.date{
+  font-size: large;
+  font-weight: 500;
+}
+.visibility{
+  align-self: flex-start;
+  width: 100%;
+}
+.visibility p{
+  color: grey;
+}
+.visibility span{
+  font-size: 4rem;
+}
+.visibility .remark{
+  font-size: .75rem;
+}
