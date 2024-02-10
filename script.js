@@ -47,11 +47,11 @@ async function checkWeather(cityName){
         error.classList.remove("visible");
 
         // changing images of last container according to the weather
-        const image = "sky.jpg";
+        let image = "sky.jpg";
 
         if(data.list[0].weather[0].main == "rain" || data.list[0].weather[0].main == "drizzle" ){
             image = "rainy.jpg";
-        }else if(data.list[0].weather[0].main == "clouds" || data.list[0].weather[0].main == "Haze"  || data.list[0].weather[0].main == "Mist" ){
+        }else if(data.list[0].weather[0].main == "Clouds" || data.list[0].weather[0].main == "Haze"  || data.list[0].weather[0].main == "Mist" ){
             image = "cloudy.jpg";
         }else if(data.list[0].weather[0].main == "snow" ){
             image = "snowy.jpg";
